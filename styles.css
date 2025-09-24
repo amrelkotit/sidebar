@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #23272f 0%, #23272f 60%, #2c2c2c 100%);
+  color: #eee;
+  min-height: 100vh;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.sidebar-logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0003;
+}
+
+.sidebar-title {
+  font-size: 1.2rem;
+  color: #ffd54f;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 250px;
+  height: 100vh;
+  background: rgba(35, 39, 47, 0.95);
+  border-right: 2px solid #ffd54f33;
+  box-shadow: 2px 0 8px #0008;
+  padding: 20px;
+  backdrop-filter: blur(12px);
+  transition: left 0.4s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar.active { left: 0; }
+
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar .menu li { margin: 15px 0; }
+
+.sidebar .menu a {
+  text-decoration: none;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #eee;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.sidebar .menu a:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateX(4px);
+}
+
+.sidebar .menu a .icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+
+#toggleBtn {
+  position: fixed;
+  top: 15px;
+  left: 10px;
+  font-size: 26px;
+  background: #ffd54f;
+  color: #23272f;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0005;
+  z-index: 1100;
+}
+
+#toggleBtn:hover { background: #fff176; }
+
+#closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ff4d4d;
+  transition: transform 0.2s;
+}
+
+#closeBtn:hover { transform: scale(1.2) rotate(8deg); }
+
+.main {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(35, 39, 47, 0.85);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px #0006;
+  margin-bottom: 40px;
+}
+
+
+.profile-card h1 {
+  font-size: 2.2rem;
+  color: #ffd54f;
+  margin: 0 0 10px;
+}
+
+.role {
+  font-size: 1.2rem;
+  color: #90caf9;
+  margin: 5px 0;
+}
+
+.university {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.skills h2 {
+  font-size: 1.8rem;
+  color: #64b5f6;
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: rgba(35, 39, 47, 0.9);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px #0005;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px #ffd54f33;
+}
+
+.skill-card h3 {
+  font-size: 1.3rem;
+  color: #ffd54f;
+  margin-bottom: 8px;
+}
+
+.skill-card p {
+  font-size: 1rem;
+  color: #ddd;
+}
