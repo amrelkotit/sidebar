@@ -52,4 +52,4 @@ MIT License
 
 ## Author
 
-[amrelkotit](https://github.com/amrelkotit)
+amrelkotit](https://github.com/amrelkotit
